@@ -42,7 +42,7 @@ SwitchPath aims to make this evidence traceable rather than automatically approv
 
 ## Architecture
 
-React + Vite frontend Ã¢â€ â€™ FastAPI backend Ã¢â€ â€™ static audit and dependency extraction Ã¢â€ â€™ FalkorDB graph persistence and traversal.
+React + Vite frontend -> FastAPI backend -> static audit and dependency extraction -> FalkorDB graph persistence and traversal.
 
 The static scanner finds files, dependencies, and candidate evidence. FalkorDB stores relationships that can be traversed to connect findings with evidence files and declared dependencies.
 
@@ -165,13 +165,13 @@ The current development session recorded 18 passing Python tests and a successfu
 
 ## API routes
 
-- `GET /api/health` Ã¢â‚¬â€ service and database health.
+- `GET /api/health` - service and database health.
 
-- `POST /api/audits/scan` Ã¢â‚¬â€ create a project audit.
+- `POST /api/audits/scan` - create a project audit.
 
-- `GET /api/audits/{audit_id}` Ã¢â‚¬â€ retrieve an audit.
+- `GET /api/audits/{audit_id}` - retrieve an audit.
 
-- `GET /api/audits/{audit_id}/trace` Ã¢â‚¬â€ trace evidence and dependency relationships.
+- `GET /api/audits/{audit_id}/trace` - trace evidence and dependency relationships.
 
 ## Interpreting results
 
